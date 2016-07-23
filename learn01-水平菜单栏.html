@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+<style>
+*{margin:0;padding:0;font-size:14px;}
+ul{list-style:none;height:30px;border-bottom:5px solid #FF0000;padding-left:50px;margin-top:20px}
+li{float:left}
+a{text-decoration:none;display:block;height:30px;line-height:30px;width:100px;background-color:#CCCCCC;margin-bottom:1px;text-align:center}
+.on,a:hover{background-color:#f00}
+</style>
+<!--<script>
+	window.onload=function(){
+	var aA=document.getElementsByTagName('a');
+	for(var i=0;i<aA.length;i++){
+		aA[i].onmouseover=function(){
+		clearInterval(this.time);
+			var THIS=this;
+			THIS.time=setInterval(function(){
+			  		THIS.style.width=THIS.offsetWidth+8+"px";
+					if(THIS.offsetWidth>=120)
+					clearInterval(THIS.time);
+			},30)
+		}
+		aA[i].onmouseout=function(){
+		clearInterval(this.time);
+			var THIS=this;
+			THIS.time=setInterval(function(){
+			  		THIS.style.width=THIS.offsetWidth-8+"px";
+					if(THIS.offsetWidth<=80)
+					{ THIS.style.width='80px';
+					clearInterval(THIS.time);}
+			},30)
+		}
+	  }
+	}
+</script>-->
+<script type="text/javascript"src="jquery-1.2.6.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('a').hover(function(){
+		$(this).animate({"width":"160px"},300)
+	},function(){
+		$(this).animate({"width":"100px"},300)
+	});
+});
+</script>
+
+<body>
+	<ul>
+	<li><a class="on" href="#">首    页</a></li>
+	<li><a href="#">新闻快讯</a></li>
+	<li><a href="#">产品展示</a></li>
+	<li><a href="#">售后服务</a></li>
+	<li><a href="#">联系我们</a></li>
+	</ul>
+</body>
+</html>
