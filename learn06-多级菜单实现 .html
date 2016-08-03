@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>纯CCS实现二级菜单</title>
+
+<style>
+*{margin:0;padding:0;font-size:14px;text-decoration:none;}
+a:hover{color:#f00;}
+ul{height:30px; background-color:#999; list-style:none;}
+ul li{float:left;position:relative;}
+ul li a{display:block; width:100px; line-height:30px; text-align:center; color:#fff;  }
+ul li ul{position:absolute; display:none;  width:100px;}
+ul li ul li{ float:none;  background-color:#fff; border-bottom:#000000 1px solid; position:relative; }
+ul li ul li a{color:#000;}
+ul li:hover ul{display:block; }
+ul li:hover ul li ul{display:none; }
+ul li ul li ul{position:absolute; width:100px; left:100px; top:0px; dispaly:none;}
+ul li ul li:hover ul{display:block;}
+</style>
+
+</head>
+
+<body>
+	<ul>
+	<li><a class="on" href="#">首    页</a></li>
+	<li><a href="#">产品中心</a>
+		<ul>
+		 <li><a href="#">HDCVI产品</a></li>
+		 <li><a href="#">摄像机+</a>
+		 	<ul>
+			 <li><a href="#">网络摄像机</a></li>
+			 <li><a href="#">数字摄像机</a></li>
+			 <li><a href="#">热成像摄像机</a></li>
+			</ul>
+		 </li>
+		 <li><a href="#">存储产品</a>
+			 <ul>
+			 <li><a href="#">数字硬盘录像机</a></li>
+			 <li><a href="#">NVR</a></li>
+			</ul>
+		 </li>
+		</ul>
+	</li>	
+	<li><a href="#">解决方案</a>
+	<ul>
+		 <li><a href="#">金融</a>
+			 <ul>
+			 <li><a href="#">银行</a></li>
+			 <li><a href="#">保险</a></li>
+			</ul>
+		 </li>
+		 <li><a href="#">交通</a></li>
+		 <li><a href="#">能源</a></li>
+		</ul>
+	</li>
+	<li><a href="#">售后服务</a></li>
+	<li><a href="#">联系我们</a></li>
+	</ul>
+</body>
+</html>
